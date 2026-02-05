@@ -1,0 +1,17 @@
+10 – Multimedia Download Manager (Multithreading)
+public class Main{
+public static void main(String[] a){
+new D("File A").start();
+new D("File B").start();
+new D("File C").start();
+}
+}
+
+class D extends Thread{
+String f;
+D(String f){this.f=f;}
+public void run(){
+for(int i=1;i<=3;i++)
+System.out.println(f+" "+(i*33)+"%");
+}
+}
