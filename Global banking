@@ -1,0 +1,22 @@
+8: Global Banking Middleware
+interface InterestRate {
+double calculate(double amount);
+}
+class Savings implements InterestRate {
+public double calculate(double a) { return a * 0.04; }
+}
+class Loan implements InterestRate {
+public double calculate(double a) { return a * 0.06; }
+}
+public class Main {
+public static void main(String[] args) {
+InterestRate s = new Savings();
+InterestRate l = new Loan();
+System.out.println(s.calculate(10000));  
+    System.out.println(l.calculate(10000));  
+}
+}
+
+OUTPUT 
+400.0
+600.0
