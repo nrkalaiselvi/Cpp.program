@@ -1,0 +1,18 @@
+11 – Architecture Blueprint Visualizer (Graphics / Shapes)
+import java.awt.;
+import javax.swing.;
+public class Plan extends JPanel {
+public void paintComponent(Graphics g) {  
+    super.paintComponent(g);  
+    g.drawRect(50, 50, 150, 100);   // Room  
+    g.drawOval(250, 70, 50, 50);    // Vent  
+    g.drawLine(50, 200, 300, 200);  // Wall  
+}  
+public static void main(String[] args) {  
+    JFrame f = new JFrame("Blueprint");  
+    f.add(new Plan());  
+    f.setSize(400, 300);  
+    f.setVisible(true);  
+    f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+}
+}
