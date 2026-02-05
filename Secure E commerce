@@ -1,0 +1,16 @@
+9 – Secure E-Commerce Checkout (Exception Handling)
+public class Main{
+static void pay(int b,int a)throws IF,NA{
+if(a<0) throw new NA();
+if(a>b) throw new IF();
+System.out.println("Success");
+}
+public static void main(String[] x){
+try{ pay(5000,3000); }
+catch(Exception e){ System.out.println("Error"); }
+finally{ System.out.println("DB Closed"); }
+}
+}
+
+class IF extends Exception{}
+class NA extends Exception{}
