@@ -1,0 +1,30 @@
+12) Applet Event Handling
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class SmartHome extends JFrame implements ActionListener {
+    JButton onBtn, offBtn;
+    SmartHome() (
+        setTitle("Smart Home Dashboard");
+        setSize(300, 200);
+        setLayout(new FlowLayout());
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        onBtn = new JButton("ON");
+        offBtn = new JButton("OFF");
+        add(onBtn);
+        add(offBtn);
+        onBtn.addActionListener(this);
+        offBtn.addActionListener(this);
+        setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == onBtn) {
+            getContentPane().setBackground(Color.YELLOW);
+        } else {
+            getContentPane().setBackground(Color.BLACK);
+        }
+    }
+    public static void main(String[] args) {
+        new SmartHome();
+    }
+}
