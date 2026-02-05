@@ -1,0 +1,26 @@
+7) Multiple Inheritance 
+public class Main {
+    interface GasolineEngine {
+        void refuel();
+    }
+    interface ElectricMotor {
+        void recharge();
+    }
+    static class HybridCar implements GasolineEngine, ElectricMotor {
+        public void refuel() {
+            System.out.println("Hybrid car is refueling with petrol.");
+        }
+        public void recharge() {
+            System.out.println("Hybrid car is recharging battery.");
+        }
+        public void drive() {
+            System.out.println("Hybrid car is driving.");
+        }
+    }
+    public static void main(String[] args) {
+        HybridCar car = new HybridCar();
+        car.refuel();
+        car.recharge();
+        car.drive();
+    }
+}
